@@ -1,0 +1,13 @@
+.center {
+    text-align: center;
+}
+
+.btn-primary{
+   
+}
+
+.center-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,26 @@
+<div class="center">
+    <!-- <label>Server Name</label>
+    <input type="text" 
+    class="form-control"
+    (input)="onUpdateServerName($event)">
+    <p>{{ serverName }}</p> -->
+    <input
+    type="text"
+    class="form-control"
+    [(ngModel)]="serverName"> 
+</div>
+
+<div class="center-btn"> 
+    <button class="btn-primary" [disabled] = "allowNewServer" (click)="onCreateServer()" >Add Server</button>
+</div> <!--the [] indicates property binding, and the () denotes event binding-->
+<div class="center">
+    <!-- <p>{{ serverCreationStatus }}</p> -->
+    <p *ngIf="serverCreated">Server was created. Server Name: {{ serverName }}</p>
+    <!-- else noServer -add this to ngIf for else statment -->
+    <!-- <ng-template #noServer>
+        <p>No server was created.</p> the else statement
+    </ng-template> -->
+</div>
+<app-server *ngFor="let server of servers"></app-server> 
+<!-- let (customVariale of customArray). For loop that outputs an array -->
+
